@@ -59,6 +59,7 @@
  * complexity?
  */
 
+struct Solution;
 // @lc code=start
 use std::{collections::HashMap, iter};
 impl Solution {
@@ -67,8 +68,8 @@ impl Solution {
 
         for (idx, num) in nums.iter().enumerate() {
             let target = target - num;
-            if (memo.contains_key(&target)) {
-                return vec![*memo.get(&target).unwrap() as i32, idx as i32];
+            if memo.contains_key(&target) {
+                return vec![*memo.get(&target).unwrap(), idx as i32];
             }
             memo.insert(*num, idx as i32);
         }
