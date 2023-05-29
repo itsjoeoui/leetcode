@@ -51,20 +51,11 @@ impl Solution {
             return false;
         }
         let mut history = HashMap::new();
-        for c in s.chars() {
-            history.entry(c).and_modify(|e| *e += 1).or_insert(1);
-        }
-        for c in t.chars() {
-            if let Some(e) = history.get_mut(&c) {
-                *e -= 1;
-                if *e == 0 {
-                    history.remove(&c);
-                }
-            } else {
-                return false;
-            }
-        }
-        return true;
+        s.chars()
+            .for_each(|c| *(history.entry(c).or_insert(0)) += 1);
+        t.chars()
+            .for_each(|c| *(history.entry(c).or_insert(0)) -= 1);
+        return history.values().all(|&v| v == 0);
     }
 }
 // @lc code=end
