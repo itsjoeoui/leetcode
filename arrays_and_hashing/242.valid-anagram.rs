@@ -43,11 +43,27 @@
  */
 
 // @lc code=start
+use std::collections::HashMap;
 impl Solution {
     pub fn is_anagram(s: String, t: String) -> bool {
         if s.len() != t.len() {
             return false;
         }
+        let mut history = HashMap::new();
+        for c in s.chars() {
+            history.entry(c).and_modify(|e| *e += 1).or_insert(1);
+        }
+        for c in t.chars() {
+            if let Some(e) = history.get_mut(&c) {
+                *e -= 1;
+                if *e == 0 {
+                    history.remove(&c);
+                }
+            } else {
+                return false;
+            }
+        }
+        return true;
     }
 }
 // @lc code=end
