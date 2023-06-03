@@ -4,11 +4,14 @@
 # [146] LRU Cache
 #
 
+
+from collections import OrderedDict
+
+
 # @lc code=start
 class LRUCache:
-
+    # this can also be implemented using a doubly linked list
     def __init__(self, capacity: int):
-        from collections import OrderedDict
         self.cap: int = capacity
         self.cache: OrderedDict = OrderedDict()
 
@@ -22,7 +25,7 @@ class LRUCache:
         self.cache[key] = value
         self.cache.move_to_end(key)
         if len(self.cache) > self.cap:
-            self.cache.popitem(last = False)
+            self.cache.popitem(last=False)
 
 
 # Your LRUCache object will be instantiated and called as such:
