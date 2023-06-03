@@ -1,3 +1,5 @@
+package leetcode
+
 /*
  * @lc app=leetcode id=1342 lang=golang
  *
@@ -19,4 +21,3 @@ func numberOfSteps(num int) int {
 }
 
 // @lc code=end
-

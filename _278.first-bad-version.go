@@ -1,8 +1,12 @@
+package leetcode
+
 /*
  * @lc app=leetcode id=278 lang=golang
  *
  * [278] First Bad Version
  */
+
+func isBadVersion(version int) bool
 
 // @lc code=start
 /**
@@ -27,4 +31,3 @@ func firstBadVersion(n int) int {
 }
 
 // @lc code=end
-

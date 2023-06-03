@@ -1,8 +1,15 @@
+package leetcode
+
 /*
  * @lc app=leetcode id=589 lang=golang
  *
  * [589] N-ary Tree Preorder Traversal
  */
+
+type Node struct {
+	Val      int
+	Children []*Node
+}
 
 // @lc code=start
 /**
@@ -30,4 +37,3 @@ func preorder(root *Node) []int {
 }
 
 // @lc code=end
-

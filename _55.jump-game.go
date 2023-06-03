@@ -1,3 +1,5 @@
+package leetcode
+
 /*
  * @lc app=leetcode id=55 lang=golang
  *
@@ -39,4 +41,3 @@ func dfs(nums *[]int, curIdx int, memo *map[int]bool) bool {
 }
 
 // @lc code=end
-

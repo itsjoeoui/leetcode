@@ -1,3 +1,5 @@
+package slidingwindow
+
 /*
  * @lc app=leetcode id=121 lang=golang
  *
@@ -40,4 +42,3 @@ func max(a int, b int) int {
 }
 
 // @lc code=end
-

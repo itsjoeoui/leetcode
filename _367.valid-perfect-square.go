@@ -1,3 +1,5 @@
+package leetcode
+
 /*
  * @lc app=leetcode id=367 lang=golang
  *
@@ -18,4 +20,3 @@ func isPerfectSquare(num int) bool {
 }
 
 // @lc code=end
-

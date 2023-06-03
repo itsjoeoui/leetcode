@@ -1,3 +1,5 @@
+package arraysandhashing
+
 /*
  * @lc app=leetcode id=1 lang=golang
  *
@@ -18,4 +20,3 @@ func twoSum(nums []int, target int) []int {
 }
 
 // @lc code=end
-

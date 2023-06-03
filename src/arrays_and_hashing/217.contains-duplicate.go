@@ -1,3 +1,5 @@
+package arraysandhashing
+
 /*
  * @lc app=leetcode id=217 lang=golang
  *
@@ -17,4 +19,3 @@ func containsDuplicate(nums []int) bool {
 }
 
 // @lc code=end
-

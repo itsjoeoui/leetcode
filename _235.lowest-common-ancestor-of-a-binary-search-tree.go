@@ -1,8 +1,16 @@
+package leetcode
+
 /*
  * @lc app=leetcode id=235 lang=golang
  *
  * [235] Lowest Common Ancestor of a Binary Search Tree
  */
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
 
 // @lc code=start
 /**
@@ -24,4 +32,3 @@ func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 }
 
 // @lc code=end
-

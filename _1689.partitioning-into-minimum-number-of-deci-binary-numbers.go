@@ -1,3 +1,5 @@
+package leetcode
+
 /*
  * @lc app=leetcode id=1689 lang=golang
  *
@@ -23,4 +25,3 @@ func minPartitions(n string) int {
 }
 
 // @lc code=end
-
