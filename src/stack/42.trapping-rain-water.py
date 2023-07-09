@@ -45,6 +45,8 @@
 #
 #
 
+from collections import deque
+
 
 # @lc code=start
 class Solution:
@@ -60,14 +62,18 @@ class Solution:
         stack = deque()
         cm = 0
         length = len(height)
+
         for i in range(length):
             cm = max(height[i], cm)
             stack.append(cm)
+
         cm = 0
+
         for i in range(length - 1, -1, -1):
             cm = max(height[i], cm)
             ce = stack.pop()
             total += min(ce, cm) - height[i]
+
         return total
 
 

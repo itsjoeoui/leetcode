@@ -52,13 +52,14 @@ public:
     int trap(vector<int> &height)
     {
         int lp = 0, rp = height.size() - 1;
-        int lmax = 0, rmax = 0;
+        int lmax = height[lp], rmax = height[rp];
 
         int ans = 0;
         while (lp < rp)
         {
-            if (height[lp] < height[rp])
+            if (lmax < rmax)
             {
+                lp++;
                 if (height[lp] >= lmax)
                 {
                     lmax = height[lp];
@@ -67,10 +68,10 @@ public:
                 {
                     ans += lmax - height[lp];
                 }
-                lp++;
             }
             else
             {
+                rp--;
                 if (height[rp] >= rmax)
                 {
                     rmax = height[rp];
@@ -79,7 +80,6 @@ public:
                 {
                     ans += rmax - height[rp];
                 }
-                rp--;
             }
         }
 
