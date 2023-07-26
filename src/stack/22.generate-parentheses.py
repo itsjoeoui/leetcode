@@ -4,7 +4,11 @@
 # [22] Generate Parentheses
 #
 
+
 # @lc code=start
+from typing import List
+
+
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         # Time: O(n)
@@ -13,15 +17,16 @@ class Solution:
         res = []
 
         def dfs(add, close, path):
-
             if close == 0:
                 res.append(path)
 
             if add > 0:
-                dfs(add-1, close, path+"(")
+                dfs(add - 1, close, path + "(")
             if close > add:
-                dfs(add, close-1, path+")")
+                dfs(add, close - 1, path + ")")
 
-        dfs(n-1, n, "(")
+        dfs(n - 1, n, "(")
         return res
+
+
 # @lc code=end
