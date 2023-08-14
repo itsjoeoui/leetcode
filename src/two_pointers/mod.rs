@@ -1,1 +1,2 @@
 pub mod _167_two_sum_ii_input_array_is_sorted;
+pub mod _28_find_the_index_of_the_first_occurrence_in_a_string;
